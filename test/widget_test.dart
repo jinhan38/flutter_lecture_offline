@@ -1,7 +1,14 @@
+import 'package:f_lecture/ch1/conditional.dart';
+import 'package:f_lecture/ch1/method.dart';
 import 'package:f_lecture/ch1/operator.dart';
 
 void main() {
-  //Variable();
+  // Variable();
 
-  Operator();
+  // Operator();
+
+  // Method();
+
+  Conditional();
 }
+

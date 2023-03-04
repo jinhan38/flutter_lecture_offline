@@ -9,7 +9,13 @@ class Operator {
     minus();
     divide();
     multiple();
+    upAndDown();
+    simpleTest();
+    compare();
+    logical();
+    typeCasting();
   }
+
 
   // 함수
   // 산술연산자 더하기
@@ -52,9 +58,98 @@ class Operator {
     print('Operator.divide age3 : $age3');
   }
 
+  // 곱하기
   void multiple() {
     int age = 10 * 20;
     print('Operator.multiple age : $age');
+  }
+
+  // 증감연산자
+  void upAndDown() {
+    int age = 30;
+    print('Operator.upAndDown age 1 : $age'); // 30
+    age++;
+    print('Operator.upAndDown age 2 : $age'); // 31
+    age--;
+    age--;
+    age--;
+    print('Operator.upAndDown age 3 : $age'); // 28
+  }
+
+  // String format 테스트
+  void simpleTest() {
+    // print() 안녕하세요. 저는 000입니다. 제 나이는 00살입니다.
+    // 00 항목은 변수로 만들어서 넣어주세요.
+
+    String name = "김진한";
+    int age = 40;
+    int day = 4;
+
+    print("오늘은 3월 $day일입니다");
+    print('안녕하세요. 저는 $name입니다. 제 나이는 $age살입니다.');
+  }
+
+  // 비교연산자
+  // == => 같은지 체크
+  // != => 다른지 체크
+  // < => 크기 체크
+  // > => 크기 체크
+  // >=
+  // <=
+  void compare() {
+    int value1 = 10;
+    int value2 = 20;
+
+    // 같다면 true, 다르다면 false
+    print('Operator.compare ${value1 == value2}'); // false
+
+    // 다른지를 체크
+    // 다르다면 true, false
+    print('Operator.compare ${10 != 20}'); // true
+
+    // <
+    // A < B, A보다 B가 더 큰지? => B가 더 크면 true, A가 더 크면 false
+    print('Operator.compare < ${10 < 20}'); // true
+
+    // >
+    // A > B, A가 B보다 큰지? => A가 더 크면 true, B가 더 크면 false
+    print('Operator.compare > ${10 > 20}'); // false
+
+    // <=
+    // A <= B, 1. A보다 B가 더 큰지?, 2. A와 B가 같은지  => B가 A와 같거나 더 큰지
+    print('Operator.compare ${10 <= 20}'); // true
+    print('Operator.compare ${20 <= 20}'); // true
+
+    // >=
+    // A >= B, 1. A가 B보다 큰지? 2. A와 B가 같은지?, A가 더 크면 true, 같으면 true
+    print('Operator.compare ${10 >= 20}'); // false
+    print('Operator.compare ${10 >= 10}'); // true
+  }
+
+  // 논리 연산자
+  // && => and,
+  // || => or
+  void logical() {
+    print('Operator.logical : ${true && true}');
+  }
+
+  // 타입변환, 형변환
+  void typeCasting(){
+    int age = 30;
+    double weight = 80.5;
+
+    age = 50; // 50
+
+    // age가 int 타입이기 때문에,
+    // double 타입인 weight를 int로 바꿔줘야 합니다.
+    age = weight.toInt();
+    print('Operator.typeCasting age $age');
+
+    // weight가 double 타입이기 때문에
+    // int 타입인 age를 double로 바꿔줘야 합니다.
+    weight = age.toDouble();
+    print('Operator.typeCasting weight $weight');
+
   }
 
 
