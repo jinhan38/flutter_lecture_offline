@@ -8,6 +8,7 @@ class Operator {
     add();
     minus();
     divide();
+    multiple();
   }
 
   // 함수
@@ -39,7 +40,22 @@ class Operator {
 
   // 나누기
   void divide() {
-    double age = 10 / 2;
+    double age = 5 / 2;
     print('Operator.divide age 1 : $age');
+
+    // 나누기 후 나머지를 반환
+    double age2 = 5 % 2;
+    print('Operator.divide age 2 : $age2');
+
+    // ~/ 몫을 구한다. int(정수)를 반환
+    int age3 = 5 ~/ 2;
+    print('Operator.divide age3 : $age3');
   }
+
+  void multiple() {
+    int age = 10 * 20;
+    print('Operator.multiple age : $age');
+  }
+
+
 }
