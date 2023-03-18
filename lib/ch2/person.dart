@@ -46,6 +46,10 @@ class Person {
     this.weight = 30,
   });
 
+  void talk() {
+    print('$name이 말을 시작했습니다.');
+  }
+
   @override
   String toString() {
     return 'Person{name: $name, age: $age, weight: $weight}';

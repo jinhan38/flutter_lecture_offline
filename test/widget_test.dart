@@ -4,6 +4,7 @@ import 'package:f_lecture/ch1/for_loop.dart';
 import 'package:f_lecture/ch1/homework/ch1_homework_conditional.dart';
 import 'package:f_lecture/ch1/method.dart';
 import 'package:f_lecture/ch1/operator.dart';
+import 'package:f_lecture/ch2/animal/animal.dart';
 import 'package:f_lecture/ch2/person.dart';
 
 void main() {
@@ -43,4 +44,8 @@ void main() {
   // Person(name: "김진한", age: 33, weight: 75.1);
   Person person = Person(name: "홍길동");
   print('person : $person');
+  person.talk();
+
+  // Animal animal = Animal(age: 10, owner: "김진한", kind: "말티즈");
+  // print('animal : $animal');
 }
