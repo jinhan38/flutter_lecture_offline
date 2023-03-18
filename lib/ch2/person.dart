@@ -30,7 +30,21 @@ class Person {
   /// 생성자 4
   /// Person 클래스를 생성할 때 name과 age는 반드시 입력해야 한다.
   /// 그리고 weight는 나중에 입력해도 됩니다.
-  Person(this.name, this.age, {this.weight = 0});
+  // Person(this.name, this.age, {this.weight = 0});
+
+  /// 생성자 5
+  // Person({
+  //   required this.name,
+  //   required this.age,
+  //   required this.weight,
+  // });
+
+  /// 생성자 6
+  Person({
+    this.name = "",
+    this.age = 20,
+    this.weight = 30,
+  });
 
   @override
   String toString() {

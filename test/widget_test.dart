@@ -32,10 +32,15 @@ void main() {
   // person2.weight = 60.5;
 
   // Person my = Person("김진한", 33, 70);
-  Person my = Person("김진한", 33);
-  my.weight = 70;
-  print('Person : $my');
+  // Person my = Person("김진한", 33);
+  // my.weight = 70;
+  // print('Person : $my');
+  //
+  // Person my2 = Person("홍길동", 300, weight: 75);
+  // print('Person : $my2');
 
-  Person my2 = Person("홍길동", 300, weight: 75);
-  print('Person : $my2');
+  /// 장점
+  // Person(name: "김진한", age: 33, weight: 75.1);
+  Person person = Person(name: "홍길동");
+  print('person : $person');
 }
