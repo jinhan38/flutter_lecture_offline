@@ -2,6 +2,8 @@ class Collections {
   /// List, Map, Set
   /// List = 목록 -> 어떠한 형태의 것들을 여러개 가지고 있는 것
   /// 주석 = 컨트롤 + /
+  /// List => 순서가 있습니다.
+  /// Map, Set => 순서가 없습니다.
   Collections() {
     // // List => String 타입을 여러개 가진 List
     //
@@ -28,6 +30,7 @@ class Collections {
     // listRemove();
     // sort();
     collectionMap();
+    collectionSet();
   }
 
   /// 1. add -> 1개 추가
@@ -147,6 +150,52 @@ class Collections {
 
     map["age"] = 33;
     map["age"] = 60;
+    map.remove("age");
+
+    /// map에서는 remove함수가 remove하나밖에 없다.
+    /// 그 이유는 순서가 있고 없음에 있습니다.
+    map.clear();
     print('Collections.collectionMap $map');
+
+    /// Map<key의 타입, value의 타입>
+    /// 일반적으로 Key는 String 타입을 사용합니다.
+    /// 일반적으로 value는 다양한 타입을 사용합니다.
+    /// 다양한 타입 -> 아무거나 올 수 있다.
+    /// 아무거나 타입 = dynamic
+    Map<String, dynamic> typeMap = {
+      "name": "김진한",
+      "age": 50,
+      "check": true,
+      "weight": 70.8,
+    };
+    print('typeMap : $typeMap');
+  }
+
+  /// Set 타입 -> List, Map과 닮았다.
+  /// List에는 중복 값이 들어갈 수 있습니다.
+  /// Set에는 중복된 값이 들어갈 수 없습니다.
+  void collectionSet() {
+    // List<int> list = [];
+    // Map<String ,dynamic> map = {};
+
+    /// Set 타입을 만드는 형태는 Map과 비슷하지만, 한개의 값을 넣을 수 있다.
+    Set set = {"a", "b", "c", 1, 2, 3};
+
+    /// 읽기, 쓰기, 수정, 제거
+    // var result = set.elementAt(3);
+    var result = set.last;
+    print('Collections.collectionSet $result');
+
+    set.add("name");
+    set.addAll(["age", "weight", 100]);
+
+    set.remove("age");
+    set.removeAll(["weight", 100]);
+    set.clear();
+    print('Collections.collectionSet $set');
+
+    Set<int> typeSet ={};
+    typeSet.add(50);
+
   }
 }

@@ -1,5 +1,6 @@
 import 'package:f_lecture/ch1/collections.dart';
 import 'package:f_lecture/ch1/conditional.dart';
+import 'package:f_lecture/ch1/for_loop.dart';
 import 'package:f_lecture/ch1/homework/ch1_homework_conditional.dart';
 import 'package:f_lecture/ch1/method.dart';
 import 'package:f_lecture/ch1/operator.dart';
@@ -15,6 +16,10 @@ void main() {
 
   // Ch1HomeworkConditional();
 
-  Collections();
+  // Collections();
+
+  ForLoop();
 }
+
+
 
