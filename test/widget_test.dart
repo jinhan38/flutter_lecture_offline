@@ -42,10 +42,13 @@ void main() {
 
   /// 장점
   // Person(name: "김진한", age: 33, weight: 75.1);
-  Person person = Person(name: "홍길동");
-  print('person : $person');
-  person.talk();
+  // Person person = Person(name: "홍길동");
+  // print('person : $person');
+  // person.talk();
 
-  // Animal animal = Animal(age: 10, owner: "김진한", kind: "말티즈");
+  Animal animal = Animal(age: 10, owner: "김진한", kind: "말티즈");
+  String run = animal.run(speed: 50);
+  print('run : $run');
+  // animal.sleep();
   // print('animal : $animal');
 }
