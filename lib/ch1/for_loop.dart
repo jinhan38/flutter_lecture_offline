@@ -19,6 +19,9 @@ class ForLoop {
     for (int i = 0; i < 5; i++) {
       // print('ForLoop.normalForLoop i : $i');
     }
+    for (int i = 0; i < 5; i++) {
+      // print('ForLoop.normalForLoop i : $i');
+    }
 
     List<String> list = ["a", "b", "c", "d", "e"];
     // list.length 배열의 개수(길이)를 반환 => 5
@@ -78,5 +81,4 @@ class ForLoop {
       print("element : $element");
     });
   }
-
 }
