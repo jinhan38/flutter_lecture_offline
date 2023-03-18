@@ -5,8 +5,12 @@ import 'package:f_lecture/ch1/homework/ch1_homework_conditional.dart';
 import 'package:f_lecture/ch1/method.dart';
 import 'package:f_lecture/ch1/operator.dart';
 import 'package:f_lecture/ch2/animal/animal.dart';
+import 'package:f_lecture/ch2/animal/bird.dart';
+import 'package:f_lecture/ch2/animal/lion.dart';
+import 'package:f_lecture/ch2/car.dart';
 import 'package:f_lecture/ch2/person.dart';
 import 'package:f_lecture/ch2/product.dart';
+import 'package:flutter/animation.dart';
 
 void main() {
   // Variable();
@@ -53,13 +57,21 @@ void main() {
   // animal.sleep();
   // print('animal : $animal');
 
-  var product = Product(price: 15000, name: "치킨", company: "BBQ");
-  for (int i = 0; i < 5; i++) {
-    product.buy();
-  }
+  // var product = Product(price: 15000, name: "치킨", company: "BBQ");
+  // for (int i = 0; i < 5; i++) {
+  //   product.buy();
+  // }
   // product.buy();
   // product.buy();
   // product.buy();
   // product.buy();
   // product.buy();
+
+  // Bird bird = Bird("비둘기", 2);
+  // bird.name;
+  // bird.age;
+  // bird.run();
+
+  Lion lion = Lion("진한", 10, 20.7);
+  print('lion : $lion');
 }
