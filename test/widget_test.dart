@@ -6,6 +6,7 @@ import 'package:f_lecture/ch1/method.dart';
 import 'package:f_lecture/ch1/operator.dart';
 import 'package:f_lecture/ch2/animal/animal.dart';
 import 'package:f_lecture/ch2/person.dart';
+import 'package:f_lecture/ch2/product.dart';
 
 void main() {
   // Variable();
@@ -46,9 +47,19 @@ void main() {
   // print('person : $person');
   // person.talk();
 
-  Animal animal = Animal(age: 10, owner: "김진한", kind: "말티즈");
-  String run = animal.run(speed: 50);
-  print('run : $run');
+  // Animal animal = Animal(age: 10, owner: "김진한", kind: "말티즈");
+  // String run = animal.run(speed: 50);
+  // print('run : $run');
   // animal.sleep();
   // print('animal : $animal');
+
+  var product = Product(price: 15000, name: "치킨", company: "BBQ");
+  for (int i = 0; i < 5; i++) {
+    product.buy();
+  }
+  // product.buy();
+  // product.buy();
+  // product.buy();
+  // product.buy();
+  // product.buy();
 }
