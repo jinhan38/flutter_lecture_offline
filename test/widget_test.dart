@@ -11,6 +11,7 @@ import 'package:f_lecture/ch2/animal/lion.dart';
 import 'package:f_lecture/ch2/homwork/ch2_homework.dart';
 import 'package:f_lecture/ch2/person.dart';
 import 'package:f_lecture/ch2/product.dart';
+import 'package:f_lecture/ch3/null_safety.dart';
 import 'package:flutter/animation.dart';
 
 void main() {
@@ -83,10 +84,19 @@ void main() {
 
   // Ch2Homework();
 
-  var bird = Bird("비둘기", 3);
-  bird.sleep2();
+  // var bird = Bird("비둘기", 3);
+  // bird.sleep2();
 
+  // NullSafety nullSafety = NullSafety();
+  // print('age : ${nullSafety.age}');
+  // nullSafety.age2 = 20;
+  // print('age2 : ${nullSafety.age2}');
+  // nullSafety.name2 = null;
+  // print('name2 : ${nullSafety.name2}');
 
-
-
+  /// NullSafety? => NullSafety 클래스(타입)이 올 수도 있고, null이 올 수도 있다.
+  NullSafety? ns;
+  print('ns : $ns');
+  ns = NullSafety();
+  print('ns22 : $ns');
 }
