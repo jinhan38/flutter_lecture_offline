@@ -63,7 +63,7 @@ class Benz extends Car implements CarInterface {
 
   /// 다른 형태의 생성자
   Benz({
-    required double price,
+    required double price, // 파라미터
     required String carName,
     required String owner,
   }) : super(price, carName, owner) {

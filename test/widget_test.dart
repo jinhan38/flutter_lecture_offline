@@ -81,5 +81,12 @@ void main() {
   // print('dog : ${dog.wake(3)}');
   // dog.swim();
 
-  Ch2Homework();
+  // Ch2Homework();
+
+  var bird = Bird("비둘기", 3);
+  bird.sleep2();
+
+
+
+
 }
