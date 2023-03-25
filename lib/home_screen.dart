@@ -1,6 +1,8 @@
 import 'package:f_lecture/ch3/widgets/container_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'ch3/widgets/column_widget.dart';
+
 /// 단축키 stl
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("HomeScreen"),
       ),
-      body: ContainerWidget(),
+      body: ColumnWidget(),
     );
   }
 }
