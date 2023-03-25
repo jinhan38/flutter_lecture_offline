@@ -11,6 +11,7 @@ import 'package:f_lecture/ch2/animal/lion.dart';
 import 'package:f_lecture/ch2/homwork/ch2_homework.dart';
 import 'package:f_lecture/ch2/person.dart';
 import 'package:f_lecture/ch2/product.dart';
+import 'package:f_lecture/ch3/constant.dart';
 import 'package:f_lecture/ch3/null_safety.dart';
 import 'package:flutter/animation.dart';
 
@@ -95,8 +96,19 @@ void main() {
   // print('name2 : ${nullSafety.name2}');
 
   /// NullSafety? => NullSafety 클래스(타입)이 올 수도 있고, null이 올 수도 있다.
-  NullSafety? ns;
-  print('ns : $ns');
-  ns = NullSafety();
-  print('ns22 : $ns');
+  // NullSafety? ns;
+  // print('ns : $ns');
+  // ns = NullSafety();
+  // print('ns22 : $ns');
+
+  // Constant constant = Constant();
+  //
+  // Constant.age3;
+  // age4;
+
+  // Constant constant = Constant(true);
+  // work 변경 불가, 오류 발생
+  // constant.work = false;
+
+
 }
