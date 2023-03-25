@@ -3,3 +3,6 @@
 단축키 F2 누르면 에러 발생한 곳으로 이동
 생성자 = 알트 + insert
 코드 정리 = 컨트롤 + 알트 + L
+
+stl -> stateless Widget 생성
+stf -> statefull Widget 생성
