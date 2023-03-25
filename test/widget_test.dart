@@ -8,6 +8,7 @@ import 'package:f_lecture/ch2/animal/animal.dart';
 import 'package:f_lecture/ch2/animal/bird.dart';
 import 'package:f_lecture/ch2/animal/dog.dart';
 import 'package:f_lecture/ch2/animal/lion.dart';
+import 'package:f_lecture/ch2/homwork/ch2_homework.dart';
 import 'package:f_lecture/ch2/person.dart';
 import 'package:f_lecture/ch2/product.dart';
 import 'package:flutter/animation.dart';
@@ -75,8 +76,10 @@ void main() {
   // Lion lion = Lion("진한", 10, 20.7);
   // print('lion : $lion');
 
-  Dog dog = Dog("순둥이", 5, 11.1);
-  print('dog : ${dog.play(1)}');
-  print('dog : ${dog.wake(3)}');
-  dog.swim();
+  // Dog dog = Dog("순둥이", 5, 11.1);
+  // print('dog : ${dog.play(1)}');
+  // print('dog : ${dog.wake(3)}');
+  // dog.swim();
+
+  Ch2Homework();
 }
