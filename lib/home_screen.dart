@@ -1,4 +1,5 @@
 import 'package:f_lecture/ch3/widgets/container_widget.dart';
+import 'package:f_lecture/ch3/widgets/row_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'ch3/widgets/column_widget.dart';
@@ -13,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("HomeScreen"),
       ),
-      body: ColumnWidget(),
+      body: RowWidget(),
     );
   }
 }
