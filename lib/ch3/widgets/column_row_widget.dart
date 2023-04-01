@@ -10,6 +10,7 @@ class ColumnRowWidget extends StatelessWidget {
       child: Column(
         children: [
           /// 상단
+          /// Row는 가로로 배치하는 위젯
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -19,6 +20,7 @@ class ColumnRowWidget extends StatelessWidget {
           ),
 
           /// 중단
+          /// Expanded는 가능한 영역을 최대한 확장
           /// 컬럼 안에 있는 로우를, 세로 영역을 최대치로 확장
           Expanded(
             child: Row(
@@ -54,12 +56,12 @@ class ColumnRowWidget extends StatelessWidget {
                 const SizedBox(height: 5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
+                  children: const [
                     Text(
                       "더조은컴퓨터학원",
                       style: TextStyle(color: Colors.yellow),
                     ),
-                    const SizedBox(width: 20),
+                    SizedBox(width: 20),
                   ],
                 ),
               ],

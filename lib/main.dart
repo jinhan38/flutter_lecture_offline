@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'ch4/scaffold_widget.dart';
 import 'home_screen.dart';
 
 /// main 함수, 앱을 실행하면 가장 먼저 실행되는 함수
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const ScaffoldWidget(),
     );
   }
 }
