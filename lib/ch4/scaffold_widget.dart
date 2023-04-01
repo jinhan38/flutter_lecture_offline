@@ -16,8 +16,55 @@ class ScaffoldWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Scaffold Widget"),
+        primary: false,
       ),
-      body: Center(),
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(),
+            ),
+          ],
+        ),
+      ),
+
+      /// true로 설정하면 키보드가 올라왔을 때 화면 사이즈 조정
+      /// false로 설정하면 키보드가 올라와도 화면 사이즈 조정 안 함
+      resizeToAvoidBottomInset: true,
+
+      /// 앱바와 같이 사용되는 특성
+      /// 상태바의 영역을 사용할지 설정
+      /// 상태바(statusBar) : 디바이스 상단에 시간, 배터리, 네트워크 정보 나오는 위치
+      primary: false,
+      extendBodyBehindAppBar: true,
+
+      /// 상태바를 제거해야 되는 경우가 있다.
+      persistentFooterAlignment: AlignmentDirectional.center,
+      persistentFooterButtons: [
+        Container(
+          width: double.infinity,
+          height: 50,
+          color: Colors.blue,
+        ),
+        // Container(
+        //   width: 100,
+        //   height: 50,
+        //   color: Colors.blue,
+        // ),
+        // Container(
+        //   width: 100,
+        //   height: 100,
+        //   color: Colors.yellow,
+        // ),
+        // Container(
+        //   width: 100,
+        //   height: 100,
+        //   color: Colors.white,
+        // ),
+      ],
     );
   }
 }
