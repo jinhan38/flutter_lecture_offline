@@ -14,10 +14,7 @@ class ScaffoldWidget extends StatelessWidget {
     /// 상위 레벨 Scaffold
     /// 하위 레벨 Center(body에 들어오는 위젯)
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Scaffold Widget"),
-        primary: false,
-      ),
+      appBar: appBarWidget(),
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
@@ -38,8 +35,8 @@ class ScaffoldWidget extends StatelessWidget {
       /// 앱바와 같이 사용되는 특성
       /// 상태바의 영역을 사용할지 설정
       /// 상태바(statusBar) : 디바이스 상단에 시간, 배터리, 네트워크 정보 나오는 위치
-      primary: false,
-      extendBodyBehindAppBar: true,
+      // primary: false,
+      // extendBodyBehindAppBar: true,
 
       /// 상태바를 제거해야 되는 경우가 있다.
       persistentFooterAlignment: AlignmentDirectional.center,
@@ -65,6 +62,83 @@ class ScaffoldWidget extends StatelessWidget {
         //   color: Colors.white,
         // ),
       ],
+    );
+  }
+
+  /// AppBar리턴하는 위젯
+  AppBar appBarWidget() {
+    return AppBar(
+      backgroundColor: Colors.red,
+
+      // z축 : z축이 높으면 그림자가 많아짐
+      // z축이 낮으면 그림자가 적어짐
+      // 0 : 그림자 없어짐
+      elevation: 3,
+      shadowColor: Colors.red,
+      title: const Text("AppBar Widget"),
+      titleTextStyle: const TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+      ),
+      centerTitle: false,
+      titleSpacing: 10,
+
+      /// Container 넣고, 50x50, 배경색은 하얀색
+      // leading: Container(
+      //   width: 50,
+      //   height: 50,
+      //   color: Colors.white,
+      //   child: const Text(
+      //     "앱",
+      //     style: TextStyle(
+      //       color: Colors.black,
+      //     ),
+      //   ),
+      // ),
+      leading: const Icon(
+        Icons.arrow_back_rounded,
+        size: 30,
+      ),
+
+      leadingWidth: 60,
+
+      /// 대괄호가 있다는 것은 List 의미
+      /// List라는 것은 여러개가 들어간다.
+      actions: const [
+        // Text("카메라"),
+        Icon(
+          Icons.alarm,
+          size: 30,
+          color: Colors.white,
+        ),
+        SizedBox(width: 10),
+        Icon(
+          Icons.photo_camera,
+          size: 30,
+        ),
+        SizedBox(width: 10),
+        Icon(
+          Icons.settings,
+          size: 30,
+        ),
+        SizedBox(width: 10),
+      ],
+
+      /// 아이콘 컬러 일괄변경
+      /// 각각의 아이콘에 컬러를 설정했다면 그것이 우선
+      foregroundColor: Colors.black,
+
+      /// height 사이즈 조절
+      toolbarHeight: 60,
+
+      /// 아이콘들의 투명도 조절
+      /// 투명도는 0 ~ 1
+      toolbarOpacity: 1,
+
+      bottom: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      bottomOpacity: 0.5,
     );
   }
 }
