@@ -1,0 +1,7 @@
+setState?
+화면을 갱신 시켜 주는 함수
+
+setState 함수는 StatefulWidget에만 있습니다.
+
+StatelessWidget 에서는
+setState 함수를 호출할 수 없습니다.

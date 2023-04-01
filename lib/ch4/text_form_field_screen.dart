@@ -20,7 +20,8 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
     // addListener = controller를 붙인 TextFormField의 값이
     // 변경 될 때 마다 호출됩니다.
     controller.addListener(() {
-      print('controller : ${controller.text}');
+      // print('controller : ${controller.text}');
+      setState(() {});
     });
     super.initState();
   }
@@ -41,7 +42,12 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
         // false : back 버튼 자동으로 보여주지 않음
         automaticallyImplyLeading: true,
       ),
-      body: body(),
+      body: Column(
+        children: [
+          body(),
+          TextFormField(),
+        ],
+      ),
     );
   }
 
@@ -55,6 +61,17 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
         cursorColor: Colors.pink,
         cursorWidth: 5,
         // cursorHeight: 35,
+
+        // 화면에 보여지는 line의 개수
+        maxLines: 3,
+
+        maxLength: 10,
+
+        // 글자가 바뀔 때 마다 호출
+        onChanged: (value) {
+          print('value : $value');
+        },
+
         cursorRadius: const Radius.circular(3),
         decoration: InputDecoration(
           // hint : 글자를 입력하지 않았을 때 보여주는 문구
@@ -67,7 +84,7 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
           enabled: true,
 
           // TextFormField 활성화 됐을 때(사용 가능할 때)
-          enabledBorder: customBorder(2, Colors.cyan),
+          enabledBorder: customBorder(5, Colors.cyan),
 
           // focus가 잡혔을 때, 커서 깜빡일 때
           focusedBorder: customBorder(2, Colors.green),
@@ -80,8 +97,14 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
           // 기획 조건 : 6글자 미만인 경우 에러 문구를 보여주고 싶다.
           // 아무것도 입력하지 않은 경우에 에러 문구를 안보여준다.
           errorBorder: customBorder(2, Colors.red),
+
+          // focus는 커서가 있는 경우
+          // focusedErrorBorder를 구현하지 않으면
+          // 기본 errorBorder 적용됩니다.
+          focusedErrorBorder: customBorder(5, Colors.red),
+          contentPadding: const EdgeInsets.all(16),
           errorText: checkErrorText(),
-          errorStyle: TextStyle(fontSize: 13),
+          errorStyle: const TextStyle(fontSize: 13),
           errorMaxLines: 1,
         ),
       ),
@@ -90,6 +113,12 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
 
   /// InputBorder 함수
   InputBorder customBorder(double width, Color color) {
+    // outline, 사각형의 테두리 border
+    return OutlineInputBorder(
+        borderSide: BorderSide(width: width, color: color),
+        borderRadius: BorderRadius.circular(20));
+
+    // 밑줄만 있는 border
     return UnderlineInputBorder(
       borderSide: BorderSide(width: width, color: color),
     );
@@ -112,17 +141,17 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
     // 3. empty의 뜻은 비어 있다.
     // 비어있으면 true, 한글자라도 있으면 false 리턴
     if (controller.text.isEmpty) {
-      print('isEmpty');
+      // print('isEmpty');
       return null;
     }
 
     // 글자수가 6개 미만인 경우
     if (controller.text.length < 6) {
-      print('6글자 미만');
+      // print('6글자 미만');
       return "6글자 이상 입력해주세요.";
     }
 
-    print('6글자 이상');
+    // print('6글자 이상');
     return null;
   }
 }
