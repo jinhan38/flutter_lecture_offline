@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'ch3/widgets/column_row_widget.dart';
 import 'ch3/widgets/column_widget.dart';
 import 'ch3/widgets/text_widget.dart';
+import 'ch4/button_screen.dart';
 
 /// 단축키 stl
 class HomeScreen extends StatelessWidget {
@@ -28,7 +29,12 @@ class HomeScreen extends StatelessWidget {
           button(
             context: context,
             text: "TextFormField",
-            page: TextFormFieldScreen(),
+            page: const TextFormFieldScreen(),
+          ),
+          button(
+            context: context,
+            text: "ButtonScreen",
+            page: const ButtonScreen(),
           ),
         ],
       ),
