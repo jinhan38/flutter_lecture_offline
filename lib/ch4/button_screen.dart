@@ -28,6 +28,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
             _textButton(),
             const SizedBox(height: 60),
             _outlinedButton(),
+            const SizedBox(height: 60),
+            _iconButton(),
           ],
         ),
       ),
@@ -74,6 +76,31 @@ class _ButtonScreenState extends State<ButtonScreen> {
       onPressed: () {},
       style: buttonStyle(),
       child: Text("OutlinedButton"),
+    );
+  }
+
+  Widget _iconButton() {
+    return IconButton(
+      onPressed: () {},
+      icon: Icon(
+        Icons.add,
+        size: 60,
+      ),
+      iconSize: 40,
+      color: Colors.green,
+      // 버튼 클릭했을 때 배경 컬러
+      highlightColor: Colors.blue.withOpacity(0.5),
+      // 버튼 눌렀을 때 물결 효과 컬러
+      splashColor: Colors.black,
+      splashRadius: 70,
+      focusColor: Colors.purple,
+      mouseCursor: SystemMouseCursors.grabbing,
+      hoverColor: Colors.red.shade200,
+
+      // 아이콘 사이즈, 클릭 영역 증가
+      constraints: const BoxConstraints(minHeight: 100, minWidth: 100),
+      padding: EdgeInsets.zero,
+      tooltip: "아이콘 버튼",
     );
   }
 
