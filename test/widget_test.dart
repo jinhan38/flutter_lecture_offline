@@ -13,6 +13,7 @@ import 'package:f_lecture/ch2/person.dart';
 import 'package:f_lecture/ch2/product.dart';
 import 'package:f_lecture/ch3/constant.dart';
 import 'package:f_lecture/ch3/null_safety.dart';
+import 'package:f_lecture/ch4/enum_class.dart';
 import 'package:flutter/animation.dart';
 
 void main() {
@@ -110,5 +111,7 @@ void main() {
   // work 변경 불가, 오류 발생
   // constant.work = false;
 
-
+  EnumClass enumClass = EnumClass();
+  String result = enumClass.check(type: LectureType.b);
+  print('result : $result');
 }

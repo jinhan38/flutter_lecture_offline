@@ -24,6 +24,10 @@ class _ButtonScreenState extends State<ButtonScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _elevatedButton(),
+            const SizedBox(height: 60),
+            _textButton(),
+            const SizedBox(height: 60),
+            _outlinedButton(),
           ],
         ),
       ),
@@ -57,6 +61,22 @@ class _ButtonScreenState extends State<ButtonScreen> {
     );
   }
 
+  Widget _textButton() {
+    return TextButton(
+      onPressed: () {},
+      style: buttonStyle(),
+      child: Text("TextButton"),
+    );
+  }
+
+  Widget _outlinedButton() {
+    return OutlinedButton(
+      onPressed: () {},
+      style: buttonStyle(),
+      child: Text("OutlinedButton"),
+    );
+  }
+
   ButtonStyle buttonStyle() {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
@@ -73,6 +93,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
       // 첫 번째는 가로(width), 두 번째는 세로(height)
       // 고정된 사이즈
       fixedSize: Size(width * 0.8, height * 0.1),
+      // fixedSize: Size(100,400),
       // minimumSize: Size(width - 200, 60),
       // maximumSize: Size(800, 150),
 
@@ -92,15 +113,62 @@ class _ButtonScreenState extends State<ButtonScreen> {
 
       enabledMouseCursor: SystemMouseCursors.grab,
 
-      shape: _shape(),
+      shape: _shape(type: OutlinedBorderType.beveledRectangleBorder),
     );
   }
 
+  OutlinedBorder _shape({required OutlinedBorderType type}) {
+    var borderSide = const BorderSide(
+      color: Colors.red,
+      width: 1,
+      strokeAlign: 20,
+    );
+    var borderRadius = BorderRadius.circular(16);
 
-  OutlinedBorder _shape() {
+    switch (type) {
+      case OutlinedBorderType.roundedRectangleBorder:
+        // 테두리와 라운드를 넣을 수 있는 형태
+        return RoundedRectangleBorder(
+          borderRadius: borderRadius,
+          side: borderSide,
+        );
+      case OutlinedBorderType.circleBorder:
+        // 원형 형태
+        return CircleBorder(
+          side: borderSide,
+
+          // 1 : 원이 사각형의 네 면에 닿는 형태
+          // 0 : 가장 가까운 두 변에 닿는 원을 그린다.
+          eccentricity: 0,
+        );
+      case OutlinedBorderType.continuousRectangleBorder:
+        // 직선 면과 둥근 모서리 사이가 부드럽고 연속적으로 전환되는 테두리
+        return ContinuousRectangleBorder(
+          borderRadius: borderRadius,
+          side: borderSide,
+        );
+      case OutlinedBorderType.beveledRectangleBorder:
+        // 테두리가 있고, 모서리가 경사진 형태
+        return BeveledRectangleBorder(
+          side: borderSide,
+          borderRadius: borderRadius,
+        );
+      case OutlinedBorderType.stadiumBorder:
+        // 긴 쪽의 테두리가 항상 반원인 형태
+        return StadiumBorder();
+    }
+
     return RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(26),
       side: BorderSide(width: 2, color: Colors.blue),
     );
   }
+}
+
+enum OutlinedBorderType {
+  roundedRectangleBorder,
+  circleBorder,
+  continuousRectangleBorder,
+  beveledRectangleBorder,
+  stadiumBorder,
 }
