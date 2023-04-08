@@ -4,6 +4,7 @@ import 'package:f_lecture/ch4/scaffold_widget.dart';
 import 'package:f_lecture/ch4/text_form_field_screen.dart';
 import 'package:f_lecture/ch5/gridview_screen.dart';
 import 'package:f_lecture/ch5/listview_screen.dart';
+import 'package:f_lecture/ch5/pageview_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'ch3/widgets/column_row_widget.dart';
@@ -23,44 +24,51 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("HomeScreen"),
       ),
-      body: Column(
-        children: [
-          button(
-            context: context,
-            text: "Scaffold, Appbar",
-            page: const ScaffoldWidget(),
-          ),
-          button(
-            context: context,
-            text: "TextFormField",
-            page: const TextFormFieldScreen(),
-          ),
-          button(
-            context: context,
-            text: "ButtonScreen",
-            page: const ButtonScreen(),
-          ),
-          button(
-            context: context,
-            text: "ImageScreen",
-            page: const ImageScreen(),
-          ),
-          button(
-            context: context,
-            text: "SingleScrollScreen",
-            page: const SingleScrollScreen(),
-          ),
-          button(
-            context: context,
-            text: "ListViewScreen",
-            page: const ListViewScreen(),
-          ),
-          button(
-            context: context,
-            text: "GridViewScreen",
-            page: const GridViewScreen(),
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            button(
+              context: context,
+              text: "Scaffold, Appbar",
+              page: const ScaffoldWidget(),
+            ),
+            button(
+              context: context,
+              text: "TextFormField",
+              page: const TextFormFieldScreen(),
+            ),
+            button(
+              context: context,
+              text: "ButtonScreen",
+              page: const ButtonScreen(),
+            ),
+            button(
+              context: context,
+              text: "ImageScreen",
+              page: const ImageScreen(),
+            ),
+            button(
+              context: context,
+              text: "SingleScrollScreen",
+              page: const SingleScrollScreen(),
+            ),
+            button(
+              context: context,
+              text: "ListViewScreen",
+              page: const ListViewScreen(),
+            ),
+            button(
+              context: context,
+              text: "GridViewScreen",
+              page: const GridViewScreen(),
+            ),
+            button(
+              context: context,
+              text: "PageViewScreen",
+              page: const PageViewScreen(),
+            ),
+          ],
+        ),
       ),
     );
   }
