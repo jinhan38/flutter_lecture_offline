@@ -8,6 +8,7 @@ import 'ch3/widgets/column_row_widget.dart';
 import 'ch3/widgets/column_widget.dart';
 import 'ch3/widgets/text_widget.dart';
 import 'ch4/button_screen.dart';
+import 'ch5/image_screen.dart';
 
 /// 단축키 stl
 class HomeScreen extends StatelessWidget {
@@ -35,6 +36,11 @@ class HomeScreen extends StatelessWidget {
             context: context,
             text: "ButtonScreen",
             page: const ButtonScreen(),
+          ),
+          button(
+            context: context,
+            text: "ImageScreen",
+            page: const ImageScreen(),
           ),
         ],
       ),
