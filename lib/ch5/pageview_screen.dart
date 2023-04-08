@@ -8,7 +8,9 @@ class PageViewScreen extends StatefulWidget {
 }
 
 class _PageViewScreenState extends State<PageViewScreen> {
-  final PageController pageController = PageController();
+  final PageController pageController = PageController(
+    viewportFraction: 0.8,
+  );
 
   /// initState는 최초 한번만 실행
   @override
@@ -167,7 +169,7 @@ class _PageViewScreenState extends State<PageViewScreen> {
 
       // scrollDirection: Axis.vertical,
 
-      pageSnapping: false,
+      pageSnapping: true,
 
       onPageChanged: (value) {
         print('value : $value');
