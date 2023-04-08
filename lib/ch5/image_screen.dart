@@ -9,8 +9,7 @@ class ImageScreen extends StatefulWidget {
 
 class _ImageScreenState extends State<ImageScreen> {
   String imageUrl =
-      "a";
-      // "https://media.cnn.com/api/v1/images/stellar/prod/210316134738-02-wisdom-project-summer.jpg?q=w_3568,h_2006,x_0,y_0,c_fill";
+      "https://media.cnn.com/api/v1/images/stellar/prod/210316134738-02-wisdom-project-summer.jpg?q=w_3568,h_2006,x_0,y_0,c_fill";
 
   @override
   Widget build(BuildContext context) {
@@ -63,4 +62,3 @@ class _ImageScreenState extends State<ImageScreen> {
     );
   }
 }
-

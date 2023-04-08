@@ -2,6 +2,8 @@ import 'package:f_lecture/ch3/widgets/container_widget.dart';
 import 'package:f_lecture/ch3/widgets/row_widget.dart';
 import 'package:f_lecture/ch4/scaffold_widget.dart';
 import 'package:f_lecture/ch4/text_form_field_screen.dart';
+import 'package:f_lecture/ch5/gridview_screen.dart';
+import 'package:f_lecture/ch5/listview_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'ch3/widgets/column_row_widget.dart';
@@ -47,6 +49,16 @@ class HomeScreen extends StatelessWidget {
             context: context,
             text: "SingleScrollScreen",
             page: const SingleScrollScreen(),
+          ),
+          button(
+            context: context,
+            text: "ListViewScreen",
+            page: const ListViewScreen(),
+          ),
+          button(
+            context: context,
+            text: "GridViewScreen",
+            page: const GridViewScreen(),
           ),
         ],
       ),
