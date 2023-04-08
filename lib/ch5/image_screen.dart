@@ -9,7 +9,8 @@ class ImageScreen extends StatefulWidget {
 
 class _ImageScreenState extends State<ImageScreen> {
   String imageUrl =
-      "https://media.cnn.com/api/v1/images/stellar/prod/210316134738-02-wisdom-project-summer.jpg?q=w_3568,h_2006,x_0,y_0,c_fill";
+      "a";
+      // "https://media.cnn.com/api/v1/images/stellar/prod/210316134738-02-wisdom-project-summer.jpg?q=w_3568,h_2006,x_0,y_0,c_fill";
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +53,9 @@ class _ImageScreenState extends State<ImageScreen> {
   /// errorBuilder는 이미지가 오류난 경우 사용하는 위젯
   Widget _network() {
     return Image.network(
-      "",
+      imageUrl,
       errorBuilder: (context, error, stackTrace) {
+        print('error : $error');
         return Text("이미지 오류");
       },
       // color: Colors.blue,
@@ -61,3 +63,4 @@ class _ImageScreenState extends State<ImageScreen> {
     );
   }
 }
+
