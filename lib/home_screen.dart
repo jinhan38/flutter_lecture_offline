@@ -5,6 +5,7 @@ import 'package:f_lecture/ch4/text_form_field_screen.dart';
 import 'package:f_lecture/ch5/gridview_screen.dart';
 import 'package:f_lecture/ch5/listview_screen.dart';
 import 'package:f_lecture/ch5/pageview_screen.dart';
+import 'package:f_lecture/ch5/ui_exam_1.dart';
 import 'package:flutter/material.dart';
 
 import 'ch3/widgets/column_row_widget.dart';
@@ -66,6 +67,11 @@ class HomeScreen extends StatelessWidget {
               context: context,
               text: "PageViewScreen",
               page: const PageViewScreen(),
+            ),
+            button(
+              context: context,
+              text: "UiExam1",
+              page: const UiExam1(),
             ),
           ],
         ),
