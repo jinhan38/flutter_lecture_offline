@@ -5,7 +5,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.3 <3.0.0'
+  sdk: '>=2.19.2 <3.0.0'
 
 dependencies:
   flutter:
@@ -27,4 +27,3 @@ flutter:
   #  assets폴더에 있는 파일들을 사용할 수 있게 경로 선언
   assets:
     - assets/
-    - assets/icon/
