@@ -19,6 +19,8 @@ class _UiExam1ReviewState extends State<UiExam1Review> {
     "assets/winter.jpg",
   ];
 
+  int _currentIndex = 0;
+
   @override
   void dispose() {
     pageController.dispose();
@@ -30,17 +32,25 @@ class _UiExam1ReviewState extends State<UiExam1Review> {
     return Scaffold(
       appBar: _appBar(),
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _top(),
-            const SizedBox(height: 10),
-            _middle(),
-            const SizedBox(height: 10),
-            _bottom(),
-          ],
-        ),
+      body: IndexedStack(
+        index: _currentIndex,
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                _top(),
+                const SizedBox(height: 10),
+                _middle(),
+                const SizedBox(height: 10),
+                _bottom(),
+              ],
+            ),
+          ),
+          const Center(child: Text("이용서비스"),),
+          const Center(child: Text("내정보"),),
+        ],
       ),
+      bottomNavigationBar: _bottomNavigation(),
     );
   }
 
@@ -137,7 +147,7 @@ class _UiExam1ReviewState extends State<UiExam1Review> {
             iconItem("바이크", Colors.indigo, () {
               debugPrint("바이크 클릭");
             }),
-            SizedBox(width: 80),
+            const SizedBox(width: 80),
           ],
         ),
       ],
@@ -223,6 +233,45 @@ class _UiExam1ReviewState extends State<UiExam1Review> {
           ),
         );
       },
+    );
+  }
+
+  Widget _bottomNavigation() {
+    return BottomNavigationBar(
+      currentIndex: _currentIndex,
+      onTap: (value) {
+        setState(() {
+          _currentIndex = value;
+        });
+        debugPrint(value.toString());
+      },
+      // showSelectedLabels: true,
+      // showUnselectedLabels: true,
+      iconSize: 26,
+      selectedFontSize: 14,
+      unselectedFontSize: 14,
+      selectedItemColor: Colors.blue,
+      unselectedItemColor: Colors.grey,
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: Colors.white,
+      elevation: 0,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home_outlined),
+          activeIcon: Icon(Icons.home),
+          label: "홈",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.assignment_outlined),
+          activeIcon: Icon(Icons.assignment),
+          label: "이용서비스",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.account_circle_outlined),
+          activeIcon: Icon(Icons.account_circle),
+          label: "내 정보",
+        ),
+      ],
     );
   }
 }

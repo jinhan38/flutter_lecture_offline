@@ -15,6 +15,7 @@ import 'ch3/widgets/text_widget.dart';
 import 'ch4/button_screen.dart';
 import 'ch5/image_screen.dart';
 import 'ch5/single_scroll_screen.dart';
+import 'ch6/bottom_navigation_bar_screen.dart';
 
 /// 단축키 stl
 class HomeScreen extends StatelessWidget {
@@ -78,6 +79,11 @@ class HomeScreen extends StatelessWidget {
               context: context,
               text: "UiExam1Review",
               page: const UiExam1Review(),
+            ),
+            button(
+              context: context,
+              text: "BottomNavigationBarScreen",
+              page: const BottomNavigationBarScreen(),
             ),
           ],
         ),
