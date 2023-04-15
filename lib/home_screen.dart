@@ -6,6 +6,7 @@ import 'package:f_lecture/ch5/gridview_screen.dart';
 import 'package:f_lecture/ch5/listview_screen.dart';
 import 'package:f_lecture/ch5/pageview_screen.dart';
 import 'package:f_lecture/ch5/ui_exam_1.dart';
+import 'package:f_lecture/ch6/default_tab_controller_screen.dart';
 import 'package:f_lecture/ch6/tabbar_exam_screen.dart';
 import 'package:f_lecture/ch6/tabbar_screen.dart';
 import 'package:f_lecture/ch6/ui_exam_1_review.dart';
@@ -96,6 +97,11 @@ class HomeScreen extends StatelessWidget {
               context: context,
               text: "TabBarExamScreen",
               page: const TabBarExamScreen(),
+            ),
+            button(
+              context: context,
+              text: "DefaultTabControllerScreen",
+              page: const DefaultTabControllerScreen(),
             ),
           ],
         ),
