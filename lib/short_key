@@ -7,3 +7,7 @@
 
 stl -> stateless Widget 생성
 stf -> statefull Widget 생성
+
+Alt + 방향키 좌우 => 파일 탭 이동
+컨트롤 + E => 이전에 켰던 파일 목록 출력, 엔터 누르면 이동
+컨트롤 + N =>

@@ -47,9 +47,12 @@ class _DefaultTabControllerScreenState extends State<DefaultTabControllerScreen>
                   },
                   child: Text("이동"),
                 ),
-                ElevatedButton(onPressed: () {
-                  tabController.animateTo(2);
-                }, child: Text("이동 애니메이션"))
+                ElevatedButton(
+                  onPressed: () {
+                    tabController.animateTo(2);
+                  },
+                  child: Text("이동 애니메이션"),
+                ),
               ],
             )
           ],
