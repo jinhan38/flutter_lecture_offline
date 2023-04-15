@@ -24,7 +24,7 @@ class _DialogScreenState extends State<DialogScreen> {
   }
 
   void showMyDialog() {
-    showDialog(
+    showDialog<String>(
       context: context,
       barrierDismissible: false,
       barrierColor: Colors.grey.withOpacity(0.5),
@@ -34,7 +34,9 @@ class _DialogScreenState extends State<DialogScreen> {
           shadowColor: Colors.red,
           elevation: 10,
           alignment: Alignment.bottomCenter,
-
+          insetPadding: EdgeInsets.only(bottom: 10, left: 30, right: 30),
+          insetAnimationDuration: Duration(milliseconds: 500),
+          insetAnimationCurve: Curves.bounceOut,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -43,7 +45,8 @@ class _DialogScreenState extends State<DialogScreen> {
                 children: [
                   IconButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      // 뒤로가기 기능
+                      Navigator.pop(context, "팝업 결과물");
                     },
                     icon: const Icon(Icons.close),
                   ),
@@ -76,6 +79,8 @@ class _DialogScreenState extends State<DialogScreen> {
           ),
         );
       },
-    );
+    ).then((value) {
+      debugPrint("value : $value");
+    });
   }
 }
