@@ -19,6 +19,7 @@ import 'ch4/button_screen.dart';
 import 'ch5/image_screen.dart';
 import 'ch5/single_scroll_screen.dart';
 import 'ch6/bottom_navigation_bar_screen.dart';
+import 'ch6/bottom_sheet_screen.dart';
 import 'ch6/dialog_screen.dart';
 
 /// 단축키 stl
@@ -108,6 +109,11 @@ class HomeScreen extends StatelessWidget {
               context: context,
               text: "DialogScreen",
               page: const DialogScreen(),
+            ),
+            button(
+              context: context,
+              text: "BottomSheetScreen",
+              page: const BottomSheetScreen(),
             ),
           ],
         ),
