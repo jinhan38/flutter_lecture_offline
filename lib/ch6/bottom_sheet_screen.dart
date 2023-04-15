@@ -7,7 +7,26 @@ class BottomSheetScreen extends StatefulWidget {
   State<BottomSheetScreen> createState() => _BottomSheetScreenState();
 }
 
-class _BottomSheetScreenState extends State<BottomSheetScreen> {
+class _BottomSheetScreenState extends State<BottomSheetScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+
+  @override
+  void initState() {
+    /// 바텀시트에 사용할 수 있는 컨트롤러
+    animationController = BottomSheet.createAnimationController(this);
+    animationController.addListener(() {
+      debugPrint(animationController.value.toString());
+    });
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +45,7 @@ class _BottomSheetScreenState extends State<BottomSheetScreen> {
 
   void _showBottomSheet() {
     showModalBottomSheet(
+      transitionAnimationController: animationController,
       context: context,
       // elevation: 150,
 
@@ -52,18 +72,18 @@ class _BottomSheetScreenState extends State<BottomSheetScreen> {
         maxWidth: 500,
         maxHeight: 1000,
       ),
-
+      isScrollControlled: true,
+      useSafeArea: true,
       builder: (context) {
-        return SizedBox(
-          height: 300,
-          child: Column(
-            children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text("버튼"),
-              ),
-            ],
-          ),
+        return Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                animationController.animateBack(0.2);
+              },
+              child: const Text("버튼 0.3"),
+            ),
+          ],
         );
       },
     );
