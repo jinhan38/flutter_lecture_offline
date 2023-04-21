@@ -1,5 +1,3 @@
-import 'package:f_lecture/ch3/widgets/container_widget.dart';
-import 'package:f_lecture/ch3/widgets/row_widget.dart';
 import 'package:f_lecture/ch4/scaffold_widget.dart';
 import 'package:f_lecture/ch4/text_form_field_screen.dart';
 import 'package:f_lecture/ch5/gridview_screen.dart';
@@ -11,11 +9,9 @@ import 'package:f_lecture/ch6/route/route_screen.dart';
 import 'package:f_lecture/ch6/tabbar_exam_screen.dart';
 import 'package:f_lecture/ch6/tabbar_screen.dart';
 import 'package:f_lecture/ch6/ui_exam_1_review.dart';
+import 'package:f_lecture/ch7/todo_list/todo_list_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'ch3/widgets/column_row_widget.dart';
-import 'ch3/widgets/column_widget.dart';
-import 'ch3/widgets/text_widget.dart';
 import 'ch4/button_screen.dart';
 import 'ch5/image_screen.dart';
 import 'ch5/single_scroll_screen.dart';
@@ -120,6 +116,11 @@ class HomeScreen extends StatelessWidget {
               context: context,
               text: "RouteScreen",
               page: const RouteScreen(),
+            ),
+            button(
+              context: context,
+              text: "TodoListScreen",
+              page: const TodoListScreen(),
             ),
           ],
         ),
