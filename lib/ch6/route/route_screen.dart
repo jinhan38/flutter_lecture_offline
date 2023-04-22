@@ -19,6 +19,7 @@ class _RouteScreenState extends State<RouteScreen> {
         ),
         body: Column(
           children: [
+            // Push, 페이지 이동
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -37,7 +38,24 @@ class _RouteScreenState extends State<RouteScreen> {
               },
               child: Text("Push"),
             ),
+
             Text(rValue),
+
+            // pushReplacement, 페이지 교체
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      // 이동할 페이지를 리턴
+                      return const RouteSecond(message: "pushReplacement");
+                    },
+                  ),
+                );
+              },
+              child: Text("pushReplacement"),
+            ),
           ],
         ));
   }
