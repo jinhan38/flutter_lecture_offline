@@ -18,6 +18,7 @@ import 'ch5/single_scroll_screen.dart';
 import 'ch6/bottom_navigation_bar_screen.dart';
 import 'ch6/bottom_sheet_screen.dart';
 import 'ch6/dialog_screen.dart';
+import 'ch8/future_screen.dart';
 
 /// 단축키 stl
 class HomeScreen extends StatelessWidget {
@@ -121,6 +122,11 @@ class HomeScreen extends StatelessWidget {
               context: context,
               text: "TodoListScreen",
               page: const TodoListScreen(),
+            ),
+            button(
+              context: context,
+              text: "FutureScreen",
+              page: const FutureScreen(),
             ),
           ],
         ),
