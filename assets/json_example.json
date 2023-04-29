@@ -1,0 +1,22 @@
+{
+  "status": "ok",
+  "totalResults": 90,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "Gizmodo.jp"
+      },
+      "author": "name",
+      "title": "Apple"
+    },
+    {
+      "source": {
+        "id": "10",
+        "name": "jinhan"
+      },
+      "author": "jinhan",
+      "title": "jinhan lecture"
+    }
+  ]
+}

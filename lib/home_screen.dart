@@ -19,6 +19,8 @@ import 'ch6/bottom_navigation_bar_screen.dart';
 import 'ch6/bottom_sheet_screen.dart';
 import 'ch6/dialog_screen.dart';
 import 'ch8/future_screen.dart';
+import 'ch8/news_screen.dart';
+import 'ch8/open_api_screen.dart';
 
 /// 단축키 stl
 class HomeScreen extends StatelessWidget {
@@ -127,6 +129,16 @@ class HomeScreen extends StatelessWidget {
               context: context,
               text: "FutureScreen",
               page: const FutureScreen(),
+            ),
+            button(
+              context: context,
+              text: "NewsScreen",
+              page: const NewsScreen(),
+            ),
+            button(
+              context: context,
+              text: "OpenApiScreen",
+              page: const OpenApiScreen(),
             ),
           ],
         ),
